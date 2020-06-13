@@ -1,0 +1,4 @@
+Flask==1.1.2
+
+#Instalación con pip
+#pip install -r requirements.txt
