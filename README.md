@@ -50,17 +50,16 @@ Creación de entorno de pruebas
 
 ## Estructura de Archivos
 
-### `__init__.py`
-
 ```python
+# __init__.py
 from flask import Flask, request
 
 app = Flask(__name__)
 from app import routes
 ```
 
-### `routes.py`.
 ```python
+#routes.py
 from flask import Flask, request, jsonify
 from app import app
 
@@ -69,16 +68,17 @@ def test():
     return jsonify({"respuesta":"Prueba Exitosa"})
 ```
 
-### `run.py`
 ```python
+# run.py
 from app import app
     
 if __name__ == "__main__":
     app.run(debug=True,port=XXXX)
 # En producción app.run(host=, port=), donde host, se le indica la dirección que tendre y port, el puerto que se requiera o no este en uso por otra aplicación.
 ```
-### `requirements.txt`
+
 ```python
+# requirements.txt
 Flask==1.1.2
 #Instalar las dependencias   con pip install -r requirements.txt
 ```
